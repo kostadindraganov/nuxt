@@ -1,4 +1,5 @@
 <script setup>
+
 const runtimeConfig = useRuntimeConfig()
 const colors = ['#f87171', '#fb923c', '#fbbf24', '#facc15', '#a3e635', '#4ade80', '#34d399', '#2dd4bf', '#22d3ee', '#38bdf8', '#60a5fa', '#818cf8', '#a78bfa', '#c084fc', '#e879f9', '#f472b6', '#fb7185']
 const color = useState('color', () => colors[Math.floor(Math.random() * colors.length)])
@@ -6,6 +7,8 @@ const color = useState('color', () => colors[Math.floor(Math.random() * colors.l
 
 <template>
   <div class="centered">
+  <spline-viewer style="width: 100%; min-height: 600px" url="https://prod.spline.design/P2ZU0z99Lip0dQHu/scene.splinecode"></spline-viewer>
+
     <h1 :style="{ color }">
       {{ runtimeConfig.public.helloText }}
     </h1>

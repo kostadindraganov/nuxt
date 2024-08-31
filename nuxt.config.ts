@@ -13,6 +13,18 @@ export default defineNuxtConfig({
   // https://hub.nuxt.com/docs/getting-started/installation#options
   hub: {},
 
+  // plugins
+  plugins: ['~/plugins/spline-viewer.client.ts'],
+
+    // compiler options
+  vue: {
+    compilerOptions: {
+        isCustomElement: (tag) => {
+          return tag === 'spline-viewer';
+        }
+      }
+    },
+
   // Env variables - https://nuxt.com/docs/getting-started/configuration#environment-variables-and-private-tokens
   runtimeConfig: {
     public: {
