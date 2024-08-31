@@ -3,15 +3,18 @@ export default defineNuxtConfig({
   compatibilityDate: '2024-07-30',
   // https://nuxt.com/docs/getting-started/upgrade#testing-nuxt-4
   future: { compatibilityVersion: 4 },
+  hub: {
+    blob: true,
+    kv: true,
+    database: true,
+    cache: true
+  },
 
   // https://nuxt.com/modules
   modules: [
     '@nuxthub/core',
     '@nuxt/eslint'
   ],
-
-  // https://hub.nuxt.com/docs/getting-started/installation#options
-  hub: {},
 
   // plugins
   plugins: ['~/plugins/spline-viewer.client.ts'],
